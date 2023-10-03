@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Food Delivery Sevice in India || Myfoodmeal.com </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        @media screen and (max-width:1000px) {
+            #clients::before{
+                width: 200% !important;
+            }
+            .our-center{
+                margin-top: 140px !important;
+            }
+            .h-services{
+                margin-top: 100px;
+                font-size: 1.5rem !important;
+            }
+            .h{
+                font-size: 1.7rem !important;
+            }
+            #navbar {
+                flex-direction: column;
+                height: 100px;
+            }
+
+            #navigation {
+                margin: 14px;
+                justify-content: center;
+            }
+
+            #navigation li {
+                margin: 9px 8px !important;
+                padding: 0px 0px;
+            }
+            #navbar #logo{
+                margin: 0px;
+            }
+            #navbar #logo img{
+                width: 45px !important;
+                height: 40px !important;
+                display: block;
+                margin: -10px auto;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .center {
+            text-align: center;
+            text-shadow: 3px 3px 3px black;
+        }
+
+        .our-center {
+            margin-top: 110px;
+        }
+
+        .h {
+            text-shadow: none;
+            font-size: 2.4rem;
+        }
+
+        .p-services {
+            padding: 0px 311px;
+            color: white;
+        }
+
+        .h-services {
+            padding-top: 23px;
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 28px;
+        }
+
+        #h-box {
+            color: black;
+            text-align: center;
+        }
+
+        #header {
+            position: sticky;
+            top: 0px;
+        }
+
+        #header p {
+            padding: 34px;
+        }
+
+        #header::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 150%;
+            z-index: -1;
+            background-color: rgb(10, 10, 10);
+        }
+
+        #navbar {
+            display: flex;
+            margin: 0px 0px 0px 30px;
+        }
+
+        #navbar #logo img {
+            margin-top: 11px;
+            border-radius: 25px;
+            width: 55px;
+            height: 54px;
+        }
+
+        #navigation {
+            display: flex;
+        }
+
+        #navigation li {
+            list-style: none;
+            margin: 28px 36px;
+        }
+
+        #navigation li a {
+            text-decoration: none;
+            padding: 12px;
+            font-weight: bold;
+            color: white;
+        }
+
+        #navigation li a:hover {
+            background-color: white;
+            color: black;
+            border-radius: 23px;
+        }
+
+        #section-header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 345px;
+        }
+
+        #section-header::before {
+            content: "";
+            background: url("img/dinner2.jpg") no-repeat center center/cover;
+            position: absolute;
+            width: 200%;
+            height: 80%;
+            z-index: -1;
+            opacity: 0.8;
+        }
+
+        #btn {
+            text-align: center;
+        }
+
+        #btn-item {
+            background-color: aquamarine;
+            margin-top: 30px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding: 6px 25px;
+            font-size: 1.1rem;
+            border: 2px solid white;
+            border-radius: 7px
+        }
+
+        #section {
+            margin-top: 40px;
+        }
+
+        #section .container-grid .box {
+            padding: 34px;
+            margin: 0px 12px;
+            background-color: rgb(174, 202, 218);
+            border: 2px solid brown;
+            border-radius: 23px;
+        }
+
+        #section .container-grid .box img {
+            width: 131px;
+            height: 102px;
+            display: block;
+            margin: auto;
+        }
+
+        #section .container-grid {
+            display: grid;
+            grid-gap: 9px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .box p {
+            margin-top: 12px;
+        }
+
+        #clients {
+            margin-top: 34px;
+            z-index: -1;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #clients::before {
+            content: "";
+            background: url("img/dinner3.jpg") no-repeat center center/cover;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.4;
+        }
+
+        #clients-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #clients #clients-item .logo {
+            display: block;
+            margin: auto;
+        }
+
+        #clients #clients-item .logo img {
+            width: 90px;
+            height: 78px;
+            margin: 30px 62px;
+        }
+
+        #clients h1 {
+            position: relative;
+            top: 15px;
+        }
+
+        #section-contect {
+            position: relative;
+        }
+
+        #section-contect::before {
+            content: "";
+            background: url("img/contect.jpg") no-repeat center center/cover;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        #section-contect form input,
+        #section-contect form textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #dcd6d6;
+            border-radius: 6px;
+        }
+
+        #section-contect form {
+            width: 40%;
+        }
+
+        #section-contect form label {
+            margin-top: 12px;
+            font-size: 1.3rem;
+        }
+
+        #contect-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 23px;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <nav id="navbar">
+            <div id="logo">
+                <img src="logo/logo.jpg" alt="Naman's Photo">
+            </div>
+            <ul id="navigation">
+                <li><a href="#navbar">Home</a></li>
+                <li><a href="#section">Services</a></li>
+                <li><a href="#clients">Clients</a></li>
+                <li><a href="#section-contect">Contect</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="section-header">
+        <div id="heading">
+            <h1 class="h-services center">Welcome to Myfoodmeal</h1>
+            <p class="center p-services">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere alias illo est
+                aperiam ipsum quia tenetur, eligendi delectus culpa veniam.</p>
+            <div id="btn">
+                <button id="btn-item">Order Now</button>
+            </div>
+        </div>
+    </section>
+
+    <h1 class="our-center center h">Our Services</h1>
+    <section id="section">
+        <div class="container-grid">
+            <div class="box">
+                <img src="logo/pizza.png" alt="">
+                <h1 id="h-box">Food Catering</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est cupiditatelorem45 quae itaque. Labore
+                    dolor
+                    magni iste itaque deleniti asperiores atque praesentium distinctio ipsam sint, eligendi, officia
+                    minima optio. Alias cupiditate ad assumenda explicabo doloreslorem34</p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic optio a iste similique perferendis et! Non
+                nemo et ducimus, rem ipsam repudiandae sint consequuntur optio itaque quae quis doloribus, mollitia
+                placeat reiciendis nesciunt quam nostrum, expedita provident quisquam laboriosam voluptas ea vel fugit
+                ipsa? Aliquid.
+            </div>
+            <div class="box">
+                <img src="logo/food.png" alt="">
+                <h1 id="h-box">Food Ordering</h1>
+                <p>Lorem ipsumlorem45 dolor sit amet consectetur, adipisicing elit. Est cupiditate quae itaque. Labore
+                    dolor
+                    magni iste itaque deleniti asperiores atque praesentium distinctio ipsam sint, eligendi, officia
+                    minima optio. Alias cupiditate ad assumenda explicabo doloreslorem34</p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic optio a iste similique perferendis et! Non
+                nemo et ducimus, rem ipsam repudiandae sint consequuntur optio itaque quae quis doloribus, mollitia
+                placeat reiciendis nesciunt quam nostrum, expedita provident quisquam laboriosam voluptas ea vel fugit
+                ipsa? Aliquid.
+            </div>
+            <div class="box">
+                <img src="logo/delivery man.png" alt="">
+                <h1 id="h-box">Bulk Ordering</h1>
+                <p>Lorem ipsumlorem45 dolor sit amet consectetur, adipisicing elit. Est cupiditate quae itaque. Labore
+                    dolor
+                    magni iste itaque deleniti asperiores atque praesentium distinctio ipsam sint, eligendi, officia
+                    minima optio. Alias cupiditate ad assumenda explicabo doloreslorem34</p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic optio a iste similique perferendis et! Non
+                nemo et ducimus, rem ipsam repudiandae sint consequuntur optio itaque quae quis doloribus, mollitia
+                placeat reiciendis nesciunt quam nostrum, expedita provident quisquam laboriosam voluptas ea vel fugit
+                ipsa? Aliquid.
+            </div>
+        </div>
+    </section>
+
+    <section id="clients">
+        <h1 class="center h">Our Clients</h1>
+        <img src="" alt="">
+        <div id="clients-item">
+            <div class="logo">
+                <img src="logo/apple.png" alt="">
+                <img src="logo/hp.png" alt="">
+                <img src="logo/microsoft.png" alt="">
+                <img src="logo/skype.png" alt="">
+            </div>
+        </div>
+    </section>
+    <section id="section-contect">
+        <h1 class="center h">Contect Us</h1>
+        <div id="contect-box">
+            <form>
+                <label for="name">Name:</label>
+                <div>
+                    <input type="text" name="name" id="name" placeholder="Enter Your Name">
+                </div>
+                <label for="Email">Email:</label>
+                <div>
+                    <input type="Email" name="Email" id="Email" placeholder="Enter Your Email">
+                </div>
+                <label for="Phone">Phone Number:</label>
+                <div>
+                    <input type="number" name="phone" id="Phone" placeholder="Enter Your Phone Number">
+                </div>
+                <label for="message">Message:</label>
+                <div>
+                    <textarea name="message" cols=30 rows=10 id="message"></textarea>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="center ">
+        Copyrighted &copy; By 2023. www.MyFoodmeal.com || All Rights Reserved
+    </footer>
+</body>
+
+</html>
