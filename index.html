@@ -15,7 +15,16 @@
 
         @media screen and (max-width:1000px) {
             #clients::before{
-                width: 200% !important;
+                width: 100dvw !important;
+            }
+            #header::before{
+                width: 100dvw !important;
+            }
+            #section-header::before{
+                width: 100dvw !important;
+            }
+            input[type = "submit"]{
+                width: 110% !important;
             }
             .our-center{
                 margin-top: 140px !important;
@@ -120,7 +129,20 @@
         #navigation {
             display: flex;
         }
-
+        #navigation li {
+            list-style: none;
+            margin: 28px 36px;
+            animation: li 1s infinite ease-in-out;
+        }
+        #navigation li:hover{
+            border: none;
+            animation: none;
+        }
+        @keyframes li {
+            100%{
+                rotate: 360deg;
+            }
+        }
         #navigation li {
             list-style: none;
             margin: 28px 36px;
@@ -315,38 +337,19 @@
             <div class="box">
                 <img src="pizza.png" alt="">
                 <h1 id="h-box">Food Catering</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est cupiditatelorem45 quae itaque. Labore
-                    dolor
-                    magni iste itaque deleniti asperiores atque praesentium distinctio ipsam sint, eligendi, officia
-                    minima optio. Alias cupiditate ad assumenda explicabo doloreslorem34</p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic optio a iste similique perferendis et! Non
-                nemo et ducimus, rem ipsam repudiandae sint consequuntur optio itaque quae quis doloribus, mollitia
-                placeat reiciendis nesciunt quam nostrum, expedita provident quisquam laboriosam voluptas ea vel fugit
-                ipsa? Aliquid.
+                <p>Food catering is the process of providing food and drinks for a specific event. This can include weddings, corporate events, conferences, birthdays, and other special occasions. Catering services can range from simple drop-off meals to elaborate sit-down dinners. Catering can be expensive, so it is important to set a budget early on. This will help you to narrow down your options and choose a caterer that fits your budget.It is important to consider the food preferences of your guests when choosing a caterer. If you have guests with dietary restrictions, be sure to let the caterer know.
             </div>
             <div class="box">
                 <img src="food.png" alt="">
                 <h1 id="h-box">Food Ordering</h1>
-                <p>Lorem ipsumlorem45 dolor sit amet consectetur, adipisicing elit. Est cupiditate quae itaque. Labore
-                    dolor
-                    magni iste itaque deleniti asperiores atque praesentium distinctio ipsam sint, eligendi, officia
-                    minima optio. Alias cupiditate ad assumenda explicabo doloreslorem34</p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic optio a iste similique perferendis et! Non
-                nemo et ducimus, rem ipsam repudiandae sint consequuntur optio itaque quae quis doloribus, mollitia
-                placeat reiciendis nesciunt quam nostrum, expedita provident quisquam laboriosam voluptas ea vel fugit
-                ipsa? Aliquid.
+                <p>Food ordering is the process of requesting food from a restaurant or other food service establishment and having it delivered to your desired location. This can be done online, over the phone, or through a mobile app
+Food ordering has become increasingly popular in recent years, as it is a convenient and easy way to get your favorite food delivered to your door. It is also a great way to support local businesses.
+There are a few different ways to order food. The most common way is to order online. Many restaurants have their own websites where you can order food and have it delivered. You can also order food through online food delivery platforms such as DoorDash, Grubhub, and Uber Eats.
             </div>
             <div class="box">
                 <img src="delivery man.png" alt="">
                 <h1 id="h-box">Bulk Ordering</h1>
-                <p>Lorem ipsumlorem45 dolor sit amet consectetur, adipisicing elit. Est cupiditate quae itaque. Labore
-                    dolor
-                    magni iste itaque deleniti asperiores atque praesentium distinctio ipsam sint, eligendi, officia
-                    minima optio. Alias cupiditate ad assumenda explicabo doloreslorem34</p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic optio a iste similique perferendis et! Non
-                nemo et ducimus, rem ipsam repudiandae sint consequuntur optio itaque quae quis doloribus, mollitia
-                placeat reiciendis nesciunt quam nostrum, expedita provident quisquam laboriosam voluptas ea vel fugit
-                ipsa? Aliquid.
+                <p>Bulk ordering is the process of purchasing a large quantity of goods or services at a discounted price. Bulk ordering can be done by individuals, businesses, and organizations.Bulk ordering can be a great way to save money and get the best deals on the items you need. By following the tips above, you can avoid the drawbacks of bulk ordering and ensure that you have a positive experience.
             </div>
         </div>
     </section>
@@ -382,6 +385,9 @@
                 <label for="message">Message:</label>
                 <div>
                     <textarea name="message" cols=30 rows=10 id="message"></textarea>
+                </div>
+                <div>
+                    <input type="Submit" value="Submit">
                 </div>
             </form>
         </div>
