@@ -371,19 +371,19 @@ There are a few different ways to order food. The most common way is to order on
             <form action="food delivery2.php" method="post">
                 <label for="name">Name:</label>
                 <div>
-                    <input type="text" name="name" id="name" placeholder="Enter Your Name">
+                    <input type="text" name="name" id="name" placeholder="Enter Your Name" required>
                 </div>
                 <label for="Email">Email:</label>
                 <div>
-                    <input type="Email" name="Email" id="Email" placeholder="Enter Your Email">
+                    <input type="Email" name="Email" id="Email" placeholder="Enter Your Email" required>
                 </div>
                 <label for="Phone">Phone Number:</label>
                 <div>
-                    <input type="number" name="phone" id="Phone" placeholder="Enter Your Phone Number">
+                    <input type="number" name="phone" id="Phone" placeholder="Enter Your Phone Number"  minlength="10" maxlength="10" required>
                 </div>
                 <label for="message">Message:</label>
                 <div>
-                    <textarea name="message" cols=30 rows=10 id="message"></textarea>
+                    <textarea name="message" cols=30 rows=10 id="message" required></textarea>
                 </div>
                 <div>
                     <input type="Submit" value="Submit">
