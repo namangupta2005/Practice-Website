@@ -50,6 +50,21 @@
                 margin: 9px 8px !important;
                 padding: 0px 0px;
             }
+             #navigation li::after{
+            content: "";
+            width: 100%;
+            top: 5px;
+            left: 0px;
+            height: 100%;
+            position: absolute;
+            transition: 0.3s;
+            transition-timing-function: ease-in-out;
+            transform: scaleX(0);
+            border-bottom: 2px solid white;
+        }
+        #navigation li:hover::after{
+            transform: scaleX(1);
+        }
             #navbar #logo{
                 margin: 0px;
             }
@@ -183,7 +198,8 @@
         }
 
         #btn-item {
-            background-color: aquamarine;
+            box-shadow: 0px 0px 5px cyan, 0px 0px 25px cyan;
+            background-color: cyan;
             margin-top: 30px;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             padding: 6px 25px;
@@ -191,7 +207,9 @@
             border: 2px solid white;
             border-radius: 7px
         }
-
+        #btn-item:hover,#btn-item:active{
+            box-shadow: 0px 0px 5px cyan, 0px 0px 25px cyan, 0px 0px 50px cyan, 0px 0px 100px cyan;
+        }
         #section {
             margin-top: 40px;
         }
@@ -393,7 +411,7 @@ There are a few different ways to order food. The most common way is to order on
     </section>
 
     <footer class="center ">
-        Copyrighted &copy; By 2023. www.MyFoodmeal.com || All Rights Reserved
+        Copyrighted &copy; By 2023. www.MyFoodmeal.com || All Rights Reserved || Last Update October 6, 2023.
     </footer>
 </body>
 
