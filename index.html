@@ -50,21 +50,6 @@
                 margin: 9px 8px !important;
                 padding: 0px 0px;
             }
-             #navigation li::after{
-            content: "";
-            width: 100%;
-            top: 5px;
-            left: 0px;
-            height: 100%;
-            position: absolute;
-            transition: 0.3s;
-            transition-timing-function: ease-in-out;
-            transform: scaleX(0);
-            border-bottom: 2px solid white;
-        }
-        #navigation li:hover::after{
-            transform: scaleX(1);
-        }
             #navbar #logo{
                 margin: 0px;
             }
@@ -78,6 +63,21 @@
 
         html {
             scroll-behavior: smooth;
+        }
+        #navigation li::after{
+            content: "";
+            width: 100%;
+            top: 5px;
+            left: 0px;
+            height: 100%;
+            position: absolute;
+            transition: 0.3s;
+            transition-timing-function: ease-in-out;
+            transform: scaleX(0);
+            border-bottom: 2px solid white;
+        }
+        #navigation li:hover::after{
+            transform: scaleX(1);
         }
 
         .center {
@@ -170,11 +170,11 @@
             color: white;
         }
 
-        #navigation li a:hover {
+       /* #navigation li a:hover {
             background-color: white;
             color: black;
             border-radius: 23px;
-        }
+        } */
 
         #section-header {
             display: flex;
