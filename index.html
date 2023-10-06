@@ -64,7 +64,7 @@
         html {
             scroll-behavior: smooth;
         }
-        #navigation li::after{
+        #navigation li a::after{
             content: "";
             width: 100%;
             top: 5px;
@@ -76,7 +76,7 @@
             transform: scaleX(0);
             border-bottom: 2px solid white;
         }
-        #navigation li:hover::after{
+        #navigation li a:hover::after{
             transform: scaleX(1);
         }
 
@@ -146,12 +146,9 @@
         }
         #navigation li {
             list-style: none;
+            position: relative;
             margin: 28px 36px;
 
-        }
-        #navigation li:hover{
-            border: none;
-            animation: none;
         }
         @keyframes li {
             100%{
