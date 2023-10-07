@@ -59,6 +59,10 @@
                 display: block;
                 margin: -10px auto;
             }
+            #navigation li a::after {
+                top: -14px !important;
+                left: 4px !important;
+            }
         }
 
         html {
@@ -114,6 +118,7 @@
         #header {
             position: sticky;
             top: 0px;
+            z-index: 100;
         }
 
         #header p {
@@ -326,7 +331,49 @@
             align-items: center;
             padding-bottom: 23px;
         }
+        #social::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: white(156, 142, 142);
+            z-index: -1;
+        }
 
+        #social {
+            position: relative;
+        }
+
+        #social h2 {
+            text-align: center;
+        }
+
+        #social #social-logo ul {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 19px;
+        }
+
+        #social-logo li {
+            list-style: none;
+        }
+
+        #social-logo li img {
+            height: 26px;
+            width: 30px;
+        }
+        #linkedin{
+            height: 36px !important ;
+            width: 41px !important ;
+        }
+        #instagram{
+            height: 32px !important ;
+            width: 51px !important ;
+        }
+        footer {
+            background-color: black;
+            color: white;
+        }
         footer {
             background-color: black;
             color: white;
@@ -420,7 +467,17 @@ There are a few different ways to order food. The most common way is to order on
             </form>
         </div>
     </section>
-
+    <section id="social">
+        <h2 id="social-heading">Follow me</h2>
+        <div id="social-logo">
+            <ul>
+                <li><a href="https://www.facebook.com/profile.php?id=100076026488235"><img src="facebook.png" alt=""></a></li>
+                <li><a href="https://twitter.com/namangupta2005?t=g1ygleruoz79kkbzihtdxg&s=09"><img src="twitter.png" alt=""></a></li>
+                <li><a href="https://www.linkedin.com/in/naman-gupta-89415925a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img id="linkedin" src="linkedin.png" alt="" id="linkedin"></a></li>
+                <li><a href="https://instagram.com/naman_gupta2005?igshid=ogq5zdc2odk2za=="><img id="instagram"src="instagram.png" alt=""></a></li>
+            </ul>
+        </div>
+    </section>
     <footer class="center ">
         Copyrighted &copy; By 2023. www.MyFoodmeal.com || All Rights Reserved || Last Update October 6, 2023.
     </footer>
