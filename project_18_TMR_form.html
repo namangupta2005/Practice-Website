@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Input Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 20px;
+        }
+        h1{
+            text-align: center;
+        }
+
+        form {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input[type = "file"]{
+            border: none;
+        }
+
+        input, textarea {
+            border: 1px solid rgb(163, 155, 155);
+            width: 100%;
+            border-radius: 5px;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            font-size:larger;
+            text-shadow: 0px 0px 10px red;
+            background-color: #4CAF50;
+            color: white;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <form action="project_18_TMR.php" method="post" enctype="multipart/form-data">
+        <h1>Personal information</h1>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone:</label>
+        <input type="number" id="phone" name="phone" required>
+
+        <label for="summery">Your Goals and describe your self:</label>
+        <textarea type="text" id="summery" name="summery" rows="10" cols="40"></textarea>
+
+        <h1>Education Section</h1>
+        <label for="degree">Degree:</label>
+        <input type="text" id="degree" name="degree" required>
+
+        <label for="university">University:</label>
+        <input type="text" id="university" name="university" required>
+
+        Upload Your image - <input type="file" id="file" name="file" required>
+
+        <label for="graduation year">Graduation Year:</label>
+        <input type="text" id="graduationyear" name="graduationyear" required>
+
+        <h1>Social Platform</h1>
+        <label for="twitter">Twitter Profile Link -</label>
+        <input type="text" id="twitter" name="twitter" required>
+
+        <label for="instagram">Instagram Profile Link -</label>
+        <input type="text" id="instagram" name="instagram" required>
+
+        <label for="linkedin">Linkedin Profile Link -</label>
+        <input type="text" id="linkedin" name="linkedin" required>
+
+        <label for="facebook">Facebook Profile Link -</label>
+        <input type="text" id="facebook" name="facebook" required>
+
+        <h1>Skill section</h1>
+        <label for="programming">Programming- </label>
+        <input type="text" id="programming" name="programming" required>
+
+        <label for="tools">Tools-</label>
+        <input type="text" id="tools" name="tools" required>
+
+        <input type="submit" value="Generate Resume">
+    </form>
+</body>
+</html>
